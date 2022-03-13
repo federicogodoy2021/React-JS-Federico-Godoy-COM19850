@@ -4,28 +4,25 @@ import NavBar from './components/NavBar/NavBar';
 //Se importa bootstrap con componentes
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemListContainer from './Container/ItemListContainer';
+import ProductList from './components/ProductList/ProductList';
 
 
 function App() {
-
-
 
   return (
     <div className="App">
       <header className="App-header">
         <NavBar/>
-        <ItemListContainer saludo='Bienvenidos al Stadium Rosario'/>{/* Acá va mi saludo */}
+         <ItemListContainer />{/*saludo='Bienvenidos al Athom Sport Rosario'/>{/* Acá va mi saludo */}
         <img src={logo} className="App-logo" alt="logo" />
-        <p>Mi proyecto React JS - Federico Godoy</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-        </a>
+        
+        <ProductList/>
+
       </header>
+        
     </div>
+
+    
   );
 }
 

@@ -10,20 +10,28 @@ function NavBar() {
     <div className='navBar'>
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
           <Container>
-        <Navbar.Brand href="#home">Stadium Rosario</Navbar.Brand>
+        <Navbar.Brand href="#home">Athom Sport Rosario</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#features">Complejos</Nav.Link>
-            <Nav.Link href="#pricing">Quienes Somos?</Nav.Link>
-            <NavDropdown title="Reservas" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Deportes</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Desafía a tu rival</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Organizá tu evento</NavDropdown.Item>
+          <NavDropdown title="Basquet" id="collasible-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Aros</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">Pelotas</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Redes</NavDropdown.Item>
+            </NavDropdown>
+            <NavDropdown title="Tenis" id="collasible-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Raquetas</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">Pelotas</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Redes</NavDropdown.Item>
+            </NavDropdown>
+            <NavDropdown title="Futbol" id="collasible-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Botines</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">Pelotas</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Redes</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link href="#deets"style={{ fontSize:'24px' }}>Contacto</Nav.Link>
+            <Nav.Link href="#deets"style={{ fontSize:'24px' }}>Carrito</Nav.Link>
             <Nav.Link eventKey={2} href="#miCarrito">
                 <Widget/>
             </Nav.Link>
