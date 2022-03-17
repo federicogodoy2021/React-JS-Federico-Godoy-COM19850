@@ -4,47 +4,47 @@ import { Card } from 'react-bootstrap'
 import adidas from "../imgs/adidas.jpg"
 import nike from "../imgs/nike.jpg"
 import reebok from "../imgs/reebok.jpg"
-import StockList from '../components/ProductList/stockList'
-import ItemCount from '../components/HandleCount/ItemCount'
+import ItemCount from '../components/ItemCount/ItemCount'
+import stock from '../components/Items/stock'
+import BuyButton from '../components/BuyButton/BuyButton'
+import ItemList from '../components/ItemList/ItemList'
 
 function ItemListContainer() {
-  return (
+
+return (
     <div >
         <CardGroup >
         <Card style={{backgroundColor: 'darkgray'}}>
             <Card.Img variant="top" src={adidas}/>
             <Card.Body>
-            <Card.Title>Pelota Adidas</Card.Title>
-            <Card.Text>
-                Pelota Adidas N°5 de cuero sintetico
-            </Card.Text>
+                <ItemList titulo = {stock[0].title} reseña = {stock[0].description} costo = {stock[0].price} />
             </Card.Body>
             <Card.Footer>
-                <ItemCount stock={StockList[0].stock} initial={1}/>
+                <ItemCount stock={stock[0].stock} initial={1}/>
+                <br/>
+                <BuyButton/>          
             </Card.Footer>
         </Card>
         <Card style={{backgroundColor: 'darkgray'}}>
             <Card.Img variant="top" src={nike}/>
             <Card.Body>
-            <Card.Title>Pelota Nike</Card.Title>
-            <Card.Text>
-                Pelota Nike N°5 de cuero sintetico
-            </Card.Text>
+                <ItemList titulo = {stock[1].title} reseña = {stock[1].description} costo = {stock[1].price} />
             </Card.Body>
             <Card.Footer>
-                <ItemCount stock={StockList[1].stock} initial={1}/>
+                <ItemCount stock={stock[1].stock} initial={1}/>
+                <br/>
+                <BuyButton/>          
             </Card.Footer>
         </Card>
         <Card style={{backgroundColor: 'darkgray'}}>
             <Card.Img variant="top" src={reebok}/>
             <Card.Body>
-            <Card.Title>Pelota Reebok</Card.Title>
-            <Card.Text>
-                Pelota Reebok N°5 de cuero sintetico
-            </Card.Text>
+                <ItemList titulo = {stock[2].title} reseña = {stock[2].description} costo = {stock[2].price} />
             </Card.Body>
             <Card.Footer>
-                <ItemCount stock={StockList[2].stock} initial={1}/>                
+                <ItemCount stock={stock[2].stock} initial={1}/>
+                <br/>
+                <BuyButton/>          
             </Card.Footer>
         </Card>
         </CardGroup>
