@@ -1,16 +1,25 @@
-const getItems = new Promise((resolve, reject) => {
+import React from 'react'
+import { Card } from 'react-bootstrap'
+import BuyButton from '../BuyButton/BuyButton'
 
-    let status = true
+function Items({producto}) {
 
-    if(status){
-        setTimeout(() => {
-        resolve(console.log("Tarea resuelta"))
-            
-        }, 2000)
-    }else{
-        reject("Se ha producido un error")
-    }
+  return (
+    <div>
+        <Card.Footer>
+            <div>
+                
+                <div titulo = {producto.title}>{`${producto.title}`}</div>
+                <div reseña = {producto.description}>{`${producto.description}`}</div>
+                <div costo = {producto.price}>{`${producto.price}`}</div>
 
-})
+            </div>
+        </Card.Footer>
+        <BuyButton/>          
 
-export default getItems
+
+    </div>
+  )
+}
+
+export default Items
